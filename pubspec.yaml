@@ -1,26 +1,5 @@
-name: flutter_pk_app
-description: Flutter WebView app with periodic notification for PK
-publish_to: "none"
-version: 1.0.0+1
-
-environment:
-  sdk: ">=2.18.0 <3.0.0"
-
 dependencies:
   flutter:
     sdk: flutter
-  webview_flutter: ^4.0.6
-  flutter_local_notifications: ^13.0.0
+  flutter_local_notifications: ^19.3.0
   timezone: ^0.10.0
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:
-  uses-material-design: true
-
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon/icon.png"
