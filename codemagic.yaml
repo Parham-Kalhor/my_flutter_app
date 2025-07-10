@@ -1,0 +1,26 @@
+workflows:
+  flutter_build:
+    name: Build Flutter APK and Web
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        APP_NAME: "MyFlutterApp"
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build APK
+        script: |
+          flutter build apk --release
+      - name: Build Web
+        script: |
+          flutter build web
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+      - build/web/**/*
+    publishing:
+      email:
+        recipients:
+          - your_email@example.com
